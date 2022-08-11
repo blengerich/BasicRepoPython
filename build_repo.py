@@ -1,13 +1,17 @@
-from config import repo_url, repo_name
+"""
+Builds the repo by reading config and replacing placeholders.
+"""
+import os
+
+from config import REPO_URL, REPO_NAME
 
 for fname in ["CONTRIBUTING.md", "README.md", "setup.py"]:
-    with open(fname, 'r') as f:
+    with open(fname, 'r', encoding='UTF-8') as f:
         text = f.read()
-    text = text.replace("{repo_url}", repo_url)
-    text = text.replace("{repo_name}", repo_name)
+    text = text.replace("{repo_url}", REPO_URL)
+    text = text.replace("{repo_name}", REPO_NAME)
 
-    with open(fname, 'w') as f:
+    with open(fname, 'w', encoding='UTF-8') as f:
         f.write(text)
 
-import os
-os.makedirs(repo_name, exist_ok=True) # Source files should be written here
+os.makedirs(REPO_NAME, exist_ok=True)  # Add your source files to this directory.
