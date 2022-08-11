@@ -13,4 +13,4 @@ This is a blank Python repo which contains setups for pylint, continuous integra
 2. Customize `config.py`.
 3. Run `build_repo.py`.
 
-Suggested workflow for making good pull requests is included in [CONTRIBUTING.md](https://github.com/blengerich/BasicRepoPython/CONTRIBUTING.md).
+Suggested workflow for making good pull requests is included in [CONTRIBUTING.md](https://github.com/blengerich/BasicRepoPython/blob/main/CONTRIBUTING.md).
